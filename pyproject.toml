@@ -1,0 +1,37 @@
+[project]
+name = "the-full-stack"
+version = "0.0.1"
+description = "Companion code for the blog post 'The Full Stack'"
+authors = [
+    {name = "Tom Hanley", email = "tjhanleyx@proton.me"},
+]
+
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+dependencies = [
+    "python-dotenv>=1.0.0",
+    "fastapi>=0.104.1",
+    "uvicorn>=0.24.0.post1",
+]
+
+[tool.pdm.dev-dependencies]
+style = [
+    "black>=23.11.0",
+]
+
+[tool.pdm.scripts]
+_.env_file = ".env"
+uvicorn = "uvicorn main:app --reload --app-dir ./src/the_full_stack"
+
+[tool.isort]
+profile = "black"
+case_sensitive = true
+
+[tool.pylint.master]
+fail-under = 7
+
+[tool.pytest.ini_options]
+markers = [
+    "integration: marks tests as an integration test",
+]

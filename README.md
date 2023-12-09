@@ -1,2 +1,3 @@
 # the-full-stack
-Companion project for The Full Stack Substack
+
+Companion project for [The Full Stack](https://webdevtom.substack.com/) Substack
